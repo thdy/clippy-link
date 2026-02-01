@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 13px;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+#app {
+  padding: 16px;
+}
+
+/* ステータス表示 */
+.status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status .check {
+  color: #22c55e;
+  font-size: 16px;
+}
+
+/* コピー内容プレビュー */
+.preview {
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #444;
+  white-space: pre-wrap;
+  word-break: break-all;
+  max-height: 80px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+}
+
+/* クエリパラメータ除去トグル */
+.strip-query-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #666;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.strip-query-toggle input[type="checkbox"] {
+  accent-color: #6366f1;
+}
+
+/* セクションラベル */
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+/* フォーマットボタン群 */
+.formats {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.format-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.format-btn:hover {
+  background: #f5f7ff;
+  border-color: #a0b4ff;
+}
+
+.format-btn .label {
+  font-weight: 500;
+}
+
+.format-btn .hint {
+  font-size: 11px;
+  color: #999;
+}
+
+.format-btn.copied {
+  background: #f0fdf4;
+  border-color: #22c55e;
+}
+
+.format-btn.copied .hint {
+  color: #22c55e;
+}
+
+.format-btn.is-default {
+  border-color: #6366f1;
+  background: #f5f3ff;
+}
+
+.format-btn.is-default .label::after {
+  content: " (デフォルト)";
+  font-size: 11px;
+  color: #6366f1;
+  font-weight: 400;
+}
+
+/* デフォルト設定トグル */
+.default-toggle {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #666;
+  cursor: pointer;
+  padding-top: 2px;
+}
+
+.default-toggle.visible {
+  display: flex;
+}
+
+.default-toggle input[type="checkbox"] {
+  accent-color: #6366f1;
+}

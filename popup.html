@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <div id="status" class="status">
+      <span class="check">&#x2713;</span>
+      <span id="status-text">コピーしました！</span>
+    </div>
+
+    <div id="preview" class="preview"></div>
+
+    <label class="strip-query-toggle">
+      <input type="checkbox" id="strip-query">
+      <span>クエリパラメータを除去</span>
+    </label>
+
+    <div class="section-label">他の形式でコピー</div>
+    <div id="formats" class="formats"></div>
+
+    <label class="default-toggle" id="default-toggle">
+      <input type="checkbox" id="set-default">
+      <span>この形式を次回からのデフォルトにする</span>
+    </label>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
